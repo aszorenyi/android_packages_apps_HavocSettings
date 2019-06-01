@@ -625,6 +625,7 @@
     <string name="status_bar_battery_style_dotted_circle">Dotted circle</string>
     <string name="status_bar_battery_style_text">Text</string>
     <string name="status_bar_battery_style_hidden">Hidden</string>
+    <string name="status_bar_battery_style_q">Android Q</string>
 
     <string name="notification_light_settings">Notification LED</string>
     <string name="notification_light_settings_summary">Configure notification light on per-app basis</string>
@@ -1655,10 +1656,26 @@
 
     <!-- Lockscreen Visualizer -->
     <string name="lockscreen_autocolor_title">Automatic color</string>
-    <string name="lockscreen_autocolor_summary">Sync color with album art</string>
-    <string name="lockscreen_autocolor_mediametadata">Requires media cover art on lockscreen enabled</string>
+    <string name="lockscreen_autocolor_summary">Sync color with lockscreen background</string>
     <string name="lockscreen_autocolor_lavalamp">Requires lava lamp disabled</string>
     <string name="lockscreen_lavalamp_title">Lava lamp</string>
     <string name="lockscreen_lavalamp_summary">Use a smooth lava lamp style color blend animation</string>
     <string name="lockscreen_lavalamp_speed_title">Color blend interval</string>
+    <string name="lockscreen_solid_lines_category">Solid Lines</string>
+    <string name="lockscreen_solid_units_count_title">Lines count</string>
+    <string name="lockscreen_solid_fudge_factor_title">Sanity level</string>
+    <string name="lockscreen_solid_units_opacity_title">Lines opacity</string>
+
+    <!-- Pocket judge -->
+    <string name="pocket_judge_title">Pocket detection</string>
+    <string name="pocket_judge_summary">Block screen and button inputs when device is in pocket</string>
+    <string name="pocket_judge_fp_title">Allow FP in pocket mode</string>
+    <string name="pocket_judge_fp_summary">Listen for fingerprint when pocket detection is active</string>
+
+    <!-- Notch: Full screen apps -->
+    <string name="display_cutout_force_fullscreen_title">Full screen apps</string>
+    <string name="display_cutout_force_fullscreen_summary">Force apps to ignore notch space</string>
+
+    <string name="lock_screen_weather_title">Show Weather</string>
+    <string name="lock_screen_weather_summary">Display the current weather info on lockscreen</string>
 </resources>

@@ -30,6 +30,7 @@
     <string name="device_category_asus_title" translatable="false">Asus</string>
     <string name="device_category_leeco_title" translatable="false">LeEco</string>
     <string name="device_category_nextbit_title" translatable="false">Nextbit</string>
+    <string name="device_category_nubia_title" translatable="false">Nubia</string>
     <string name="device_category_yu_title" translatable="false">YU</string>
 
     <!-- Devices & Maintainers -->
@@ -66,6 +67,9 @@
     <string name="device_taimen" translatable="false">Google Pixel 2 XL</string>
     <string name="device_taimen_summary" translatable="false">taimen\nSteve Provancal (slothdabski)</string>
 
+    <string name="device_j7xelte" translatable="false">Samsung Galaxy J7 2016</string>
+    <string name="device_j7xelte_summary" translatable="false">j7xelte\nRuturaj Kadam</string>
+
     <string name="device_on7xelte" translatable="false">Samsung Galaxy J7 Prime</string>
     <string name="device_on7xelte_summary" translatable="false">on7xelte\nDouglas Gomes</string>
 
@@ -74,6 +78,9 @@
 
     <string name="device_trlte" translatable="false">Samsung Galaxy Note 4</string>
     <string name="device_trlte_summary" translatable="false">trlte\nKhalvat-M (khalvat)</string>
+
+    <string name="device_tblte" translatable="false">Samsung Galaxy Note Edge</string>
+    <string name="device_tblte_summary" translatable="false">tblte\nKhalvat-M (khalvat)</string>
 
     <string name="device_ks01ltex" translatable="false">Samsung Galaxy S4 i9506</string>
     <string name="device_ks01ltex_summary" translatable="false">ks01ltex\nKhalvat-M (khalvat)</string>
@@ -87,6 +94,12 @@
     <string name="device_hero2lte" translatable="false">Samsung Galaxy S7 Edge</string>
     <string name="device_hero2lte_summary" translatable="false">hero2lte\nGibran Mather (gibranm)</string>
 
+    <string name="device_potter" translatable="false">Moto G5 Plus</string>
+    <string name="device_potter_summary" translatable="false">potter\nShiv (Spdroid)</string>
+
+    <string name="device_montana" translatable="false">Moto G5S</string>
+    <string name="device_montana_summary" translatable="false">montana\nJoão Lucas (JohnLaff)</string>
+	
     <string name="device_sanders" translatable="false">Moto G5S Plus</string>
     <string name="device_sanders_summary" translatable="false">sanders\nRonax (ronaxdevil)</string>
 
@@ -136,13 +149,16 @@
     <string name="device_land_summary" translatable="false">land\nSaksham Singh</string>
 
     <string name="device_markw" translatable="false">Xiaomi Redmi 4 Prime</string>
-    <string name="device_markw_summary" translatable="false">markw\nAggelos Savvopoulos (DarkAngelGR)</string>
+    <string name="device_markw_summary" translatable="false">markw\nPéter Róth (Deus)</string>
 
     <string name="device_rolex" translatable="false">Xiaomi Redmi 4A</string>
     <string name="device_rolex_summary" translatable="false">rolex\nAnkan Ghosh (Ankan005)</string>
 
     <string name="device_santoni" translatable="false">Xiaomi Redmi 4X</string>
     <string name="device_santoni_summary" translatable="false">santoni\nViraj Patil (Stargazer19)</string>
+
+    <string name="device_rosy" translatable="false">Xiaomi Redmi 5</string>
+    <string name="device_rosy_summary" translatable="false">rosy\nSukrut Bhagwat (Sukrut4778)</string>	
 
     <string name="device_vince" translatable="false">Xiaomi Redmi 5 Plus</string>
     <string name="device_vince_summary" translatable="false">vince\nAbubakar Yagoub (Blacksuan19)</string>
@@ -157,10 +173,13 @@
     <string name="device_whyred_summary" translatable="false">whyred\nRuturaj Kadam</string>
 
     <string name="device_tulip" translatable="false">Xiaomi Redmi Note 6 Pro</string>
-    <string name="device_tulip_summary" translatable="false">tulip\nPavan Patel (Pavanpatel)</string>
+    <string name="device_tulip_summary" translatable="false">tulip\nSagar Gaur (linuxlover1337)</string>
 
     <string name="device_violet" translatable="false">Xiaomi Redmi Note 7 Pro</string>
     <string name="device_violet_summary" translatable="false">violet\nRuturaj Kadam</string>
+
+    <string name="device_a6000" translatable="false">Lenovo A6000/Plus</string>
+    <string name="device_a6000_summary" translatable="false">a6000\nIvan Hephaestus</string>
 
     <string name="device_kuntao" translatable="false">Lenovo P2</string>
     <string name="device_kuntao_summary" translatable="false">kuntao\nAdvaith Bhat (advaithbhat)</string>
@@ -177,7 +196,13 @@
     <string name="device_ether" translatable="false">Nextbit Robin</string>
     <string name="device_ether_summary" translatable="false">ether\nAnierin Bliss (anierinb)</string>
 
+    <string name="device_nx531j" translatable="false">Nubia Z11</string>
+    <string name="device_nx531j_summary" translatable="false">nx531j\nRishi Shukla (lightvortex)</string>
+
     <string name="device_lettuce" translatable="false">YU Yuphoria</string>
     <string name="device_lettuce_summary" translatable="false">lettuce\nGaurav Kumar (Gaurav24)</string>
+
+    <string name="device_yureka2" translatable="false">YU Yureka 2</string>
+    <string name="device_yureka2_summary" translatable="false">YUREKA2\nJathin (jmjxperia)</string>
 
 </resources>

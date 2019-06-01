@@ -147,6 +147,16 @@
         android:id="@+id/device_category_samsung"
         android:title="@string/device_category_samsung_title" >
 
+        <Preference
+            android:id="@+id/device_j7xelte"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_j7xelte_summary"
+            android:title="@string/device_j7xelte" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/notallowedontelegram" />
+        </Preference> 
+
         <Preference 
             android:id="@+id/device_on7xelte"
             android:icon="@drawable/havoc_device"
@@ -172,6 +182,16 @@
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_trlte_summary"
             android:title="@string/device_trlte" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/Mba65music" />
+        </Preference>
+
+        <Preference 
+            android:id="@+id/device_tblte"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_tblte_summary"
+            android:title="@string/device_tblte" >
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/Mba65music" />
@@ -221,6 +241,26 @@
     <PreferenceCategory
         android:id="@+id/device_category_motorola"
         android:title="@string/device_category_motorola_title" >
+
+	    <Preference
+            android:id="@+id/device_potter"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_potter_summary"
+            android:title="@string/device_potter" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/shivvvvvv" />
+        </Preference>
+
+	    <Preference
+            android:id="@+id/device_montana"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_montana_summary"
+            android:title="@string/device_montana" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/JohnLaff" />
+        </Preference>
 
         <Preference
             android:id="@+id/device_sanders"
@@ -394,7 +434,7 @@
             android:title="@string/device_markw" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/DarkAngelGR" />
+                android:data="https://t.me/rpeter" />
         </Preference>
 
         <Preference
@@ -415,6 +455,16 @@
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/beingstargazer" />
+        </Preference>
+
+		<Preference
+            android:id="@+id/device_rosy"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_rosy_summary"
+            android:title="@string/device_rosy" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/Sukrut4778" />
         </Preference>
 
         <Preference
@@ -457,15 +507,15 @@
                 android:data="https://t.me/notallowedontelegram" />
         </Preference>
 
-        <!--<Preference
+        <Preference
             android:id="@+id/device_tulip"
             android:icon="@drawable/havoc_device"
             android:summary="@string/device_tulip_summary"
             android:title="@string/device_tulip" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/Advertpavan" />
-        </Preference>-->
+                android:data="https://t.me/Linuxlover1337" />
+        </Preference>
 
         <Preference
             android:id="@+id/device_violet"
@@ -481,6 +531,16 @@
     <PreferenceCategory
         android:id="@+id/device_category_lenovo"
         android:title="@string/device_category_lenovo_title" >
+
+        <Preference
+            android:id="@+id/device_a6000"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_a6000_summary"
+            android:title="@string/device_a6000" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/IvanHephaestus" />
+        </Preference>
 
         <Preference
             android:id="@+id/device_kuntao"
@@ -549,6 +609,21 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:id="@+id/device_category_nubia"
+        android:title="@string/device_category_nubia_title" >
+              
+        <Preference
+            android:id="@+id/device_nx531j"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_nx531j_summary"
+            android:title="@string/device_nx531j" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/Lightvortex242" />
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:id="@+id/device_category_yu"
         android:title="@string/device_category_yu_title" >
 
@@ -561,5 +636,15 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://t.me/gaurav24" />
         </Preference>
+
+        <Preference
+            android:id="@+id/device_yureka2"
+            android:icon="@drawable/havoc_device"
+            android:summary="@string/device_yureka2_summary"
+            android:title="@string/device_yureka2" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/jmjxperia" />
+        </Preference>		
     </PreferenceCategory>
 </PreferenceScreen>

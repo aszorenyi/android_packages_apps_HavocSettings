@@ -81,20 +81,39 @@
         android:key="weather_lockscreen_key"
         android:title="@string/weather_title" >
 
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="weather_lockscreen_enabled"
+            android:title="@string/lock_screen_weather_title"
+            android:summary="@string/lock_screen_weather_summary"
+            android:defaultValue="true" />
+
         <com.havoc.support.preferences.SystemSettingListPreference
             android:key="weather_lockscreen_unit"
-            android:dialogTitle="@string/weather_unit"
             android:title="@string/weather_unit"
             android:summary="%s"
             android:entries="@array/weather_unit_entries"
             android:entryValues="@array/weather_unit_values"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            android:dependency="weather_lockscreen_enabled" />
 
     </PreferenceCategory>
 
     <PreferenceCategory
         android:key="ls_unlocking"
         android:title="@string/ls_unlocking">
+
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="pocket_judge"
+            android:title="@string/pocket_judge_title"
+            android:summary="@string/pocket_judge_summary"
+            android:defaultValue="false" />
+
+        <com.havoc.support.preferences.SystemSettingSwitchPreference
+            android:key="pocket_judge_allow_fp"
+            android:title="@string/pocket_judge_fp_title"
+            android:summary="@string/pocket_judge_fp_summary"
+            android:defaultValue="false"
+            android:dependency="pocket_judge" />
 
         <SwitchPreference
             android:key="fingerprint_success_vib"
