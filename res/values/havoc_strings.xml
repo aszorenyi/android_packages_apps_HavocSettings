@@ -1143,21 +1143,26 @@
     <string name="qstile_circle_gradient">Circle (Gradient)</string>
     <string name="qstile_circle_trim">Circle (Trim)</string>
     <string name="qstile_cookie">Cookie</string>
+    <string name="qstile_cosmos">Cosmos</string>
+    <string name="qstile_dividedcircle">Divided Circle</string>
     <string name="qstile_dottedcircle">Dotted Circle</string>
     <string name="qstile_circle_dualtone">Dual-Toned Circle</string>
     <string name="qstile_dual_tone_circle">Dual-Toned Circle (Trim)</string>
     <string name="qstile_ink">Ink</string>
     <string name="qstile_inkdrop">Inkdrop</string>
     <string name="qstile_mountain">Mountain</string>
+    <string name="qstile_neon">Neon Light</string>
     <string name="qstile_ninja">Ninja</string>
     <string name="qstile_oreo">Oreo</string>
     <string name="qstile_oreo_circle_trim">Oreo (Circle Trim)</string>
     <string name="qstile_oreo_squircle_trim">Oreo (Squircle Trim)</string>
+    <string name="qstile_oos">OOS</string>
     <string name="qstile_pokesign">Pokesign</string>
     <string name="qstile_squaremedo">Squaremedo</string>
     <string name="qstile_squircle">Squircle</string>
     <string name="qstile_squircle_trim">Squircle (Trim)</string>
     <string name="qstile_teardrop">Teardrop</string>
+    <string name="qstile_triangle">Triangle</string>
     <string name="qstile_wavey">Wavey</string>
 
     <!-- Show VoLTE icon on statusbar -->
@@ -1686,4 +1691,30 @@
     <!-- Charging animation -->
     <string name="charging_animation_title">Charging animation</string>
     <string name="charging_animation_summary">Display an animation when the device is plugged in</string>
+
+    <!-- Gaming mode -->
+    <string name="gaming_mode_title">Gaming Mode</string>
+    <string name="gaming_mode_summary">Customize gaming mode preferences</string>
+    <string name="gaming_mode_app_picker_title">Automatically turn on for these apps</string>
+    <string name="add_gaming_mode_package_title">Add apps for Gaming Mode</string>
+    <string name="add_gaming_mode_package_summary">Gaming mode will automatically be turned on for the selected apps</string>
+    <string name="gaming_mode_headsup_title">Block notifications</string>
+    <string name="gaming_mode_headsup_summary">Block all headsup messages except calls</string>
+    <string name="gaming_mode_hardware_keys_title">Lock buttons</string>
+    <string name="gaming_mode_hardware_keys_summary">Disable hardware buttons when Gaming mode is turned on</string>
+    <string name="gaming_mode_brightness_title">Disable automatic brightness</string>
+    <string name="gaming_mode_brightness_summary">Lock screen brightness when Gaming mode is turned on</string>
+    <string name="gaming_mode_ringer_title">Ringer in gaming mode</string>
+    <string name="gaming_mode_ringer_off_title">Do not change</string>
+    <string name="gaming_mode_ringer_vibrate_title">Vibrate</string>
+    <string name="gaming_mode_ringer_dnd_title">Do Not Disturb</string>
+    <string name="gaming_mode_ringer_silent_title">Silent</string>
+    <string name="gaming_mode_notifications_title">Notifications</string>
+    <string name="gaming_mode_notifications_off_title">Disabled</string>
+    <string name="gaming_mode_notifications_notif_title">Show notification</string>
+    <string name="gaming_mode_notifications_toast_title">Show toasts</string>
+    <string name="gaming_mode_notifications_all_title">Show toasts and notifications</string>
+    <string name="gaming_mode_dynamic_title">Dynamic mode</string>
+    <string name="gaming_mode_dynamic_summary">Whenever you open any app and the system finds it to be a game, it will be added in gaming list automatically. Please note that this does not work for every game app.</string>
+
 </resources>
