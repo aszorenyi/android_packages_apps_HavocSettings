@@ -18,17 +18,25 @@ package com.havoc.settings.fragments;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.ContentResolver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Resources;
+import android.database.ContentObserver;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.UserHandle;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceGroup;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.PreferenceViewHolder;
+import android.support.v14.preference.SwitchPreference;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -53,6 +61,9 @@ public class GamingMode extends SettingsPreferenceFragment
         implements Preference.OnPreferenceClickListener {
 
     private static final int DIALOG_GAMING_APPS = 1;
+    private static final String GAMING_MODE_HW_KEYS = "gaming_mode_hw_keys_toggle";
+    private SwitchPreference mHardwareKeysDisable;
+    private SwitchPreference mGamingModeEnabled;
 
     private PackageListAdapter mPackageAdapter;
     private PackageManager mPackageManager;
@@ -62,11 +73,32 @@ public class GamingMode extends SettingsPreferenceFragment
     private String mGamingPackageList;
     private Map<String, Package> mGamingPackages;
 
+    private static final String GAMING_MODE_ENABLED = "gaming_mode_enabled";
+
+    private static final int KEY_MASK_HOME = 0x01;
+    private static final int KEY_MASK_BACK = 0x02;
+    private static final int KEY_MASK_MENU = 0x04;
+    private static final int KEY_MASK_APP_SWITCH = 0x10;
+
+    private Context mContext;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Get launch-able applications
         addPreferencesFromResource(R.xml.gaming_mode_settings);
+
+        mFooterPreferenceMixin.createFooterPreference().setTitle(R.string.add_gaming_mode_package_summary);
+
+        final PreferenceScreen prefScreen = getPreferenceScreen();
+        mHardwareKeysDisable = (SwitchPreference) findPreference(GAMING_MODE_HW_KEYS);
+
+        mGamingModeEnabled = (SwitchPreference) findPreference(GAMING_MODE_ENABLED);
+
+        if (!hasHWkeys()) {
+            prefScreen.removePreference(mHardwareKeysDisable);
+        }
+        
         mPackageManager = getPackageManager();
         mPackageAdapter = new PackageListAdapter(getActivity());
 
@@ -79,13 +111,10 @@ public class GamingMode extends SettingsPreferenceFragment
 
         mAddGamingPref.setOnPreferenceClickListener(this);
 
-        Resources systemUiResources;
-        try {
-            systemUiResources = getPackageManager().getResourcesForApplication("com.android.systemui");
-        } catch (Exception e) {
-            return;
-        }
+        mContext = getActivity().getApplicationContext();
 
+        SettingsObserver observer = new SettingsObserver(new Handler(Looper.getMainLooper()));
+        observer.observe();
     }
 
     @Override
@@ -136,6 +165,34 @@ public class GamingMode extends SettingsPreferenceFragment
         return dialog;
     }
 
+    class SettingsObserver extends ContentObserver {
+        SettingsObserver(Handler handler) {
+            super(handler);
+        }
+
+        void observe() {
+            ContentResolver resolver = mContext.getContentResolver();
+
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.GAMING_MODE_ACTIVE), false, this,
+                    UserHandle.USER_ALL);
+        }
+
+        @Override
+        public void onChange(boolean selfChange, Uri uri) {
+            if (uri.equals(Settings.System.getUriFor(
+                                   Settings.System.GAMING_MODE_ACTIVE))) {
+                boolean enable = Settings.System.getInt(mContext.getContentResolver(),
+                    Settings.System.GAMING_MODE_ACTIVE, 0) == 1;
+                setGamingControls(!enable);
+            }
+        }
+    }
+
+    private void setGamingControls(boolean enable) {
+        mGamingModeEnabled.setEnabled(enable);
+    }
+
     /**
      * Application class
      */
@@ -169,6 +226,19 @@ public class GamingMode extends SettingsPreferenceFragment
         }
 
     };
+
+    private boolean hasHWkeys() {
+        final int deviceKeys = getContext().getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareKeys);
+
+        // read bits for present hardware keys
+        final boolean hasHomeKey = (deviceKeys & KEY_MASK_HOME) != 0;
+        final boolean hasBackKey = (deviceKeys & KEY_MASK_BACK) != 0;
+        final boolean hasMenuKey = (deviceKeys & KEY_MASK_MENU) != 0;
+        final boolean hasAppSwitchKey = (deviceKeys & KEY_MASK_APP_SWITCH) != 0;
+
+        return (hasHomeKey || hasBackKey || hasMenuKey || hasAppSwitchKey);
+    }
 
     private void refreshCustomApplicationPrefs() {
         if (!parsePackageList()) {
